@@ -149,12 +149,29 @@ const List<TripPhase> tripPhases = [
     icon: Icons.location_city,
     sections: [
       TripNoteSection(
-        title: 'Mescid-i Nebevî ve Bakî',
-        icon: Icons.mosque,
+        title: 'Ravza Ziyareti',
+        icon: Icons.star,
+        important: true,
+        numbered: true,
         links: [_nusukLink],
         items: [
+          "Ravza'ya girmek için Nusuk uygulamasından randevu alınması gerekiyor. Tarih yaklaşınca randevu Türkiye'den de alınabiliyor.",
+          'Randevuyu namaz vaktinden yaklaşık 1 saat öncesine alın; böylece vakit namazını da orada kılmanız kolaylaşır.',
+          'Randevu saatinden 20 dakika önce giriş yapılabiliyor. Girişte telefondaki karekodu okutup içeri giriyorsunuz.',
+          "Önce içerideki bir bekleme alanında, yoğunluğa göre 10–20 dakika bekletiliyorsunuz; ardından asıl Ravza'ya geçiliyor.",
+          'Girişte görevliler sağa doğru yönlendiriyor. Fırsat bulup sol tarafa geçin ve en öne doğru ilerleyin; görevlilerle olabildiğince göz göze gelmemeye çalışın.',
+          'Asıl Ravza alanı en önde, sol tarafta iki sütun arasındadır.',
+          'Yer bulduğunuz anda hemen namaza durun; namaz kılan kişiye görevliler dokunmuyor.',
+          "Ezan vaktine 15 dakika kalaya kadar orada kalabilirseniz vakit namazını cemaatle Ravza'da kılabilirsiniz.",
+          'Peygamberimiz (s.a.s.) bu alan için "Evimle minberim arası cennet bahçelerinden bir bahçedir." buyurmuştur (Buhârî, 1196; Müslim, 1391). Bu yüzden ziyaretçiler burada iki rekât namaz kılmaya özen gösterir.',
+        ],
+        warning: 'Ravza çok kalabalık olur. Öne geçmeye çalışırken kimseyi itip kakmadan, sakin ve edepli şekilde ilerleyin.',
+      ),
+      TripNoteSection(
+        title: 'Mescid-i Nebevî ve Bakî',
+        icon: Icons.mosque,
+        items: [
           '365 numaralı kapının hemen yanında, ikindi namazından sonra Cennetü\'l-Bakî kapısı açılıyor; bu saatte ziyaret edilebilir.',
-          'Ravza ziyareti için Nusuk uygulamasından randevu alın.',
         ],
       ),
       TripNoteSection(

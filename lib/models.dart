@@ -132,6 +132,7 @@ class TripNoteSection {
     this.numbered = false,
     this.links = const [],
     this.warning,
+    this.important = false,
   });
 
   final String title;
@@ -139,6 +140,9 @@ class TripNoteSection {
   final List<String> items;
   final bool numbered;
   final List<NoteLink> links;
+
+  /// Ekranda ve PDF'te "Önemli" olarak vurgulanır.
+  final bool important;
 
   /// Bölümün altında gösterilen uyarı metni.
   final String? warning;

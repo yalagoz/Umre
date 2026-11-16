@@ -137,15 +137,37 @@ pw.Widget _phaseTitle(String title) => pw.Container(
   ),
 );
 
-pw.Widget _heading(String text) => pw.Padding(
+pw.Widget _heading(String text, {bool important = false}) => pw.Padding(
   padding: const pw.EdgeInsets.only(top: 14, bottom: 6),
-  child: pw.Text(
-    text,
-    style: pw.TextStyle(
-      fontSize: 13,
-      fontWeight: pw.FontWeight.bold,
-      color: _green,
-    ),
+  child: pw.Row(
+    children: [
+      pw.Text(
+        text,
+        style: pw.TextStyle(
+          fontSize: 13,
+          fontWeight: pw.FontWeight.bold,
+          color: _green,
+        ),
+      ),
+      if (important) ...[
+        pw.SizedBox(width: 8),
+        pw.Container(
+          padding: const pw.EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+          decoration: const pw.BoxDecoration(
+            color: _gold,
+            borderRadius: pw.BorderRadius.all(pw.Radius.circular(4)),
+          ),
+          child: pw.Text(
+            'ÖNEMLİ',
+            style: pw.TextStyle(
+              fontSize: 8,
+              fontWeight: pw.FontWeight.bold,
+              color: PdfColors.black,
+            ),
+          ),
+        ),
+      ],
+    ],
   ),
 );
 
@@ -180,7 +202,7 @@ List<pw.Widget> _section(TripNoteSection section) => [
     child: pw.Column(
       crossAxisAlignment: pw.CrossAxisAlignment.start,
       children: [
-        _heading(section.title),
+        _heading(section.title, important: section.important),
         _item(section.items.first, _marker(section, 0)),
       ],
     ),
@@ -204,6 +226,7 @@ List<pw.Widget> _section(TripNoteSection section) => [
     ),
   if (section.warning != null)
     pw.Container(
+      width: double.infinity,
       margin: const pw.EdgeInsets.only(top: 4, bottom: 2),
       padding: const pw.EdgeInsets.all(8),
       decoration: const pw.BoxDecoration(

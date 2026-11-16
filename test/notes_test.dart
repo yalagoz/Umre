@@ -29,6 +29,13 @@ void main() {
       ]);
     });
 
+    test('Medine notları önemli Ravza bölümüyle başlar', () {
+      final ravza = tripPhaseById('medine').sections.first;
+      expect(ravza.title, 'Ravza Ziyareti');
+      expect(ravza.important, isTrue);
+      expect(ravza.links.map((l) => l.url), contains('https://www.nusuk.sa/'));
+    });
+
     test('PDF dosya adları', () {
       expect(
         pdfFileName([tripPhaseById('once')]),

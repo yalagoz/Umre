@@ -6,6 +6,7 @@ import '../data/notlar.dart';
 import '../models.dart';
 import '../services/pdf_export.dart';
 import '../state/app_state.dart';
+import '../theme.dart';
 import '../widgets/common.dart';
 import 'notes_pdf_screen.dart';
 
@@ -259,6 +260,12 @@ class _SectionCard extends StatelessWidget {
     final scale = AppScope.of(context).textScale;
 
     return Card(
+      shape: section.important
+          ? RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+              side: const BorderSide(color: brandGold, width: 2),
+            )
+          : null,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 14, 16, 8),
         child: Column(
@@ -266,7 +273,10 @@ class _SectionCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                Icon(section.icon, color: scheme.primary),
+                Icon(
+                  section.icon,
+                  color: section.important ? brandGold : scheme.primary,
+                ),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
@@ -276,6 +286,26 @@ class _SectionCard extends StatelessWidget {
                     ),
                   ),
                 ),
+                if (section.important)
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 3,
+                    ),
+                    decoration: BoxDecoration(
+                      color: brandGold,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Text(
+                      'ÖNEMLİ',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.8,
+                      ),
+                    ),
+                  ),
               ],
             ),
             const SizedBox(height: 10),
