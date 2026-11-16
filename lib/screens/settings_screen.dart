@@ -114,7 +114,8 @@ class SettingsScreen extends StatelessWidget {
             '• T.C. Diyanet İşleri Başkanlığı, Hac ve Umre Duaları (hacumreegitim.hac.gov.tr)\n'
             '• TDV İslâm Ansiklopedisi, "Umre" maddesi\n'
             '• Kur\'ân-ı Kerîm\n'
-            '• Sahîh-i Buhârî, Sahîh-i Müslim, Sünen-i Ebû Dâvûd, Sünen-i İbn Mâce, Sünen-i Tirmizî\n\n'
+            '• Sahîh-i Buhârî, Sahîh-i Müslim, Sünen-i Ebû Dâvûd, Sünen-i İbn Mâce, Sünen-i Tirmizî\n'
+            '• Suudi e-Vize portalı (visa.visitsaudi.com) ve Haremeyn Hızlı Treni (sar.hhr.sa)\n\n'
             'Arapça metinler bu kaynaklarla karşılaştırılarak hazırlanmıştır. '
             'Hükümler Hanefî mezhebine göre özetlenmiştir.',
           ),

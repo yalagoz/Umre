@@ -12,6 +12,9 @@ Future<void> main() async {
   LicenseRegistry.addLicense(() async* {
     final license = await rootBundle.loadString('assets/fonts/OFL.txt');
     yield LicenseEntryWithLineBreaks(['Amiri'], license);
+    yield LicenseEntryWithLineBreaks([
+      'Noto Sans',
+    ], await rootBundle.loadString('assets/fonts/NotoSans-OFL.txt'));
   });
   final state = await AppState.load();
   runApp(UmreApp(state: state));

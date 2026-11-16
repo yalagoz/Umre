@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -18,6 +20,7 @@ class AppState extends ChangeNotifier {
       for (final mode in CounterMode.values)
         mode: _prefs.getInt('$_kCounter.${mode.name}') ?? 0,
     };
+    _notes = _loadNotes();
   }
 
   static Future<AppState> load() async =>
@@ -31,6 +34,7 @@ class AppState extends ChangeNotifier {
   static const _kFavorites = 'favorites';
   static const _kChecked = 'checklist';
   static const _kCounter = 'counter';
+  static const _kNotes = 'userNotes';
 
   static const minTextScale = 0.85;
   static const maxTextScale = 1.6;
@@ -48,6 +52,7 @@ class AppState extends ChangeNotifier {
   late Set<String> _favorites;
   late Set<String> _checked;
   late Map<CounterMode, int> _counts;
+  late List<UserNote> _notes;
 
   ThemeMode get themeMode => _themeMode;
   double get textScale => _textScale;
@@ -124,6 +129,63 @@ class AppState extends ChangeNotifier {
   void increment(CounterMode mode) => _setCount(mode, count(mode) + 1);
   void decrement(CounterMode mode) => _setCount(mode, count(mode) - 1);
   void resetCounter(CounterMode mode) => _setCount(mode, 0);
+
+  List<UserNote> _loadNotes() {
+    final raw = _prefs.getString(_kNotes);
+    if (raw == null) return [];
+    try {
+      return [
+        for (final item in jsonDecode(raw) as List)
+          UserNote.fromJson(item as Map<String, dynamic>),
+      ];
+    } on FormatException {
+      return [];
+    }
+  }
+
+  void _saveNotes() {
+    _prefs.setString(_kNotes, jsonEncode([for (final n in _notes) n.toJson()]));
+    notifyListeners();
+  }
+
+  /// Bir aşamaya ait kişisel notlar, eklenme sırasıyla.
+  List<UserNote> notesFor(String phaseId) =>
+      _notes.where((n) => n.phaseId == phaseId).toList();
+
+  void addNote(String phaseId, String text) {
+    final now = DateTime.now();
+    _notes.add(
+      UserNote(
+        id: now.microsecondsSinceEpoch.toString(),
+        phaseId: phaseId,
+        text: text,
+        updatedAt: now,
+      ),
+    );
+    _saveNotes();
+  }
+
+  void updateNote(UserNote note, String text) {
+    final index = _notes.indexWhere((n) => n.id == note.id);
+    if (index < 0) return;
+    _notes[index] = note.copyWith(text: text, updatedAt: DateTime.now());
+    _saveNotes();
+  }
+
+  /// Notu siler ve geri almak için eski konumunu döndürür.
+  int deleteNote(UserNote note) {
+    final index = _notes.indexWhere((n) => n.id == note.id);
+    if (index >= 0) {
+      _notes.removeAt(index);
+      _saveNotes();
+    }
+    return index;
+  }
+
+  void restoreNote(UserNote note, int index) {
+    _notes.insert(index.clamp(0, _notes.length), note);
+    _saveNotes();
+  }
 }
 
 /// [AppState]'i widget ağacına taşır ve değişikliklerde yeniden çizim yapar.

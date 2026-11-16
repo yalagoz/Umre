@@ -5,8 +5,9 @@ import 'checklist_screen.dart';
 import 'counter_screen.dart';
 import 'duas_screen.dart';
 import 'guide_screen.dart';
+import 'notes_screen.dart';
 
-/// Alt menülü ana iskelet: Rehber, Dualar, Sayaç, Hazırlık.
+/// Alt menülü ana iskelet: Rehber, Dualar, Sayaç, Hazırlık, Notlar.
 class HomeShell extends StatefulWidget {
   const HomeShell({super.key});
 
@@ -22,6 +23,7 @@ class _HomeShellState extends State<HomeShell> {
     DuasScreen(),
     CounterScreen(initialMode: CounterMode.tavaf),
     ChecklistScreen(),
+    NotesScreen(),
   ];
 
   @override
@@ -51,6 +53,11 @@ class _HomeShellState extends State<HomeShell> {
             icon: Icon(Icons.checklist_outlined),
             selectedIcon: Icon(Icons.checklist),
             label: 'Hazırlık',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.sticky_note_2_outlined),
+            selectedIcon: Icon(Icons.sticky_note_2),
+            label: 'Notlar',
           ),
         ],
       ),

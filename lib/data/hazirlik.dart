@@ -56,6 +56,7 @@ const List<ChecklistSection> checklistSections = [
       "Telefon ve şarj aleti",
       "Taşınabilir şarj cihazı (powerbank)",
       "Priz dönüştürücü (çoğunlukla İngiliz tipi, G)",
+      "Telefonda Nusuk, Uber ve Haramain tren uygulamaları",
     ],
   ),
   ChecklistSection(

@@ -155,3 +155,62 @@ class SectionHeader extends StatelessWidget {
     );
   }
 }
+
+/// Madde işaretli veya numaralı liste.
+class BulletList extends StatelessWidget {
+  const BulletList({
+    super.key,
+    required this.items,
+    required this.style,
+    this.numbered = false,
+  });
+
+  final List<String> items;
+  final TextStyle style;
+  final bool numbered;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        for (var i = 0; i < items.length; i++)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 28,
+                  child: numbered
+                      ? CircleAvatar(
+                          radius: 11,
+                          backgroundColor: scheme.primary,
+                          child: Text(
+                            '${i + 1}',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: scheme.onPrimary,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                      : Padding(
+                          padding: const EdgeInsets.only(top: 8, left: 6),
+                          child: Icon(
+                            Icons.circle,
+                            size: 7,
+                            color: scheme.primary,
+                          ),
+                        ),
+                ),
+                const SizedBox(width: 6),
+                Expanded(child: Text(items[i], style: style)),
+              ],
+            ),
+          ),
+      ],
+    );
+  }
+}

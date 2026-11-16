@@ -116,6 +116,91 @@ class ChecklistSection {
 
 enum CounterMode { tavaf, say }
 
+class NoteLink {
+  const NoteLink(this.label, this.url);
+
+  final String label;
+  final String url;
+}
+
+/// Seyahat notlarında başlıklı bir madde grubu.
+class TripNoteSection {
+  const TripNoteSection({
+    required this.title,
+    required this.icon,
+    required this.items,
+    this.numbered = false,
+    this.links = const [],
+    this.warning,
+  });
+
+  final String title;
+  final IconData icon;
+  final List<String> items;
+  final bool numbered;
+  final List<NoteLink> links;
+
+  /// Bölümün altında gösterilen uyarı metni.
+  final String? warning;
+}
+
+/// Yolculuğun bir aşaması: gitmeden önce, Mekke, Medine, dönüş.
+class TripPhase {
+  const TripPhase({
+    required this.id,
+    required this.title,
+    required this.tabLabel,
+    required this.icon,
+    required this.sections,
+    this.includesChecklist = false,
+  });
+
+  final String id;
+  final String title;
+  final String tabLabel;
+  final IconData icon;
+  final List<TripNoteSection> sections;
+
+  /// PDF'e hazırlık listesinin de eklenip eklenmeyeceği.
+  final bool includesChecklist;
+}
+
+/// Kullanıcının kendi yazdığı not.
+class UserNote {
+  const UserNote({
+    required this.id,
+    required this.phaseId,
+    required this.text,
+    required this.updatedAt,
+  });
+
+  final String id;
+  final String phaseId;
+  final String text;
+  final DateTime updatedAt;
+
+  UserNote copyWith({String? text, DateTime? updatedAt}) => UserNote(
+    id: id,
+    phaseId: phaseId,
+    text: text ?? this.text,
+    updatedAt: updatedAt ?? this.updatedAt,
+  );
+
+  Map<String, Object> toJson() => {
+    'id': id,
+    'phase': phaseId,
+    'text': text,
+    'updated': updatedAt.toIso8601String(),
+  };
+
+  factory UserNote.fromJson(Map<String, dynamic> json) => UserNote(
+    id: json['id'] as String,
+    phaseId: json['phase'] as String,
+    text: json['text'] as String,
+    updatedAt: DateTime.parse(json['updated'] as String),
+  );
+}
+
 /// Türkçe karakterleri ve şapkalı harfleri sadeleştirerek arama yapılabilir hale getirir.
 String normalizeForSearch(String input) {
   const map = {

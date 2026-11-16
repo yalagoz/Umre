@@ -194,7 +194,6 @@ class _Bullets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -207,41 +206,7 @@ class _Bullets extends StatelessWidget {
           ),
           const SizedBox(height: 8),
         ],
-        for (var i = 0; i < block.items.length; i++)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 28,
-                  child: block.numbered
-                      ? CircleAvatar(
-                          radius: 11,
-                          backgroundColor: scheme.primary,
-                          child: Text(
-                            '${i + 1}',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: scheme.onPrimary,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
-                      : Padding(
-                          padding: const EdgeInsets.only(top: 8, left: 6),
-                          child: Icon(
-                            Icons.circle,
-                            size: 7,
-                            color: scheme.primary,
-                          ),
-                        ),
-                ),
-                const SizedBox(width: 6),
-                Expanded(child: Text(block.items[i], style: style)),
-              ],
-            ),
-          ),
+        BulletList(items: block.items, numbered: block.numbered, style: style),
       ],
     );
   }
