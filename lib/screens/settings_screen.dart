@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 
-const appVersion = '1.0.0';
+const appVersion = '1.1.0';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
