@@ -107,7 +107,9 @@ void main() {
 
     await tester.tap(find.text('Hazırlık'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Pasaport (en az 6 ay geçerli)'));
+    await tester.tap(
+      find.text('Pasaport (en az 1 yıl geçerli olması önerilir)'),
+    );
     await tester.pump();
 
     expect(state.isChecked('evrak.0'), isTrue);

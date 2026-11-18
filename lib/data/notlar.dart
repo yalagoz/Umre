@@ -73,7 +73,8 @@ const List<TripPhase> tripPhases = [
         links: [_nusukLink],
         items: [
           'Umre izni ve Ravza ziyareti randevusu için Nusuk uygulamasının telefona yüklenmesi gerekmektedir.',
-          'Menenjit (ACWY) aşısı yolculuktan en az 10 gün önce yaptırılmalı, aşı kartı seyahat süresince yanınızda bulundurulmalıdır.',
+          'Suudi Arabistan Sağlık Bakanlığı, vize türünden bağımsız olarak umre yapacak herkesin yolculuktan en az 10 gün önce menenjit (ACWY) aşısı yaptırmasını şart koşmaktadır.',
+          'Uygulamada turistik vizeyle yapılan girişlerde aşı kartı her zaman kontrol edilmemektedir. Ancak kural her an uygulanabileceği için aşının yaptırılması ve aşı kartının seyahat süresince yanınızda bulundurulması önerilir.',
         ],
       ),
       TripNoteSection(
@@ -83,7 +84,7 @@ const List<TripPhase> tripPhases = [
         items: [
           'Haremeyn Hızlı Treni biletleri sar.hhr.sa internet sitesinden veya Haramain (HHR) mobil uygulamasından satın alınabilir. Sefer saatlerine sar.hhr.sa/timetable adresinden ulaşılabilir.',
           'Medine–Mekke arası tek yön bilet ücreti ekonomi sınıfında yaklaşık 160–190 riyal, business sınıfında ise 260 riyal ve üzeridir. Fiyatlar tarihe ve KDV oranına göre değişiklik gösterebilir.',
-          'Yolcu başına 1 büyük valiz (en fazla 25 kg ve 65×55×35 cm) ile 1 el çantası taşıma hakkı bulunmaktadır.',
+          'Yolcu başına 1 orta boy valiz (en fazla 25 kg ve 65×55×35 cm) ile 1 el çantası taşıma hakkı bulunmaktadır. Büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır.',
           'Kalkışa 20 dakikadan az süre kala bilet değişikliği yapılamaz. Trene yetişemeyen yolcunun bileti geçersiz hâle gelir.',
         ],
       ),
@@ -91,10 +92,20 @@ const List<TripPhase> tripPhases = [
         title: 'Para ve Ulaşım',
         icon: Icons.payments,
         items: [
-          'Kredi kartı hemen her yerde kabul edilmektedir ve döviz kuru açısından genellikle daha avantajlıdır.',
+          'Kredi kartı hemen her yerde kabul edilmektedir.',
+          'Kuveyt Türk kredi kartları, yurt dışı harcamalarını kur farkı eklemeden alış ve satış kurunun ortalaması üzerinden ekstreye yansıtmaktadır. Örneğin alış kuru 13,00 TL ve satış kuru 13,50 TL olduğunda harcama 13,25 TL üzerinden hesaplanmaktadır. Bu nedenle Kuveyt Türk kartları bu konuda avantajlıdır; diğer bankaların uygulamaları ayrıca araştırılabilir.',
           'Taksi için Uber uygulamasının önceden telefona yüklenmesi önerilir.',
-          'Hızlı trende en büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Bu nedenle çok büyük valizle seyahat edilmemesi önerilir.',
+          'Hızlı trende büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Bu nedenle orta boy valizle seyahat edilmesi önerilir.',
         ],
+      ),
+      TripNoteSection(
+        title: 'Elektrik Prizleri',
+        icon: Icons.power,
+        items: [
+          'Suudi Arabistan\'da çoğunlukla üç delikli İngiliz tipi (G) prizler kullanılmaktadır. Priz dönüştürücü önerilir ancak zorunlu değildir.',
+          'Türkiye\'de kullanılan fişler de bu prizlere takılabilir. Bunun için prizin üst kısmındaki tekli deliğe tahta bir çubuk gibi yalıtkan bir cisim yerleştirilir; böylece priz kilidi açılır ve fiş alttaki iki deliğe takılabilir.',
+        ],
+        warning: 'Priz kilidini açmak için yalnızca kuru ve yalıtkan bir cisim kullanılmalıdır. Bu işlemde kesinlikle metal bir cisim kullanılmamalıdır.',
       ),
     ],
   ),
@@ -105,10 +116,11 @@ const List<TripPhase> tripPhases = [
     icon: Icons.mosque,
     sections: [
       TripNoteSection(
-        title: 'Mescid-i Haram Kapıları',
+        title: "Harem'e Ulaşım ve Kapılar",
         icon: Icons.door_front_door,
         items: [
-          "Kral Abdülaziz Kapısı, tavafın başlangıç noktası olan Hacerülesved hizasına (selamlama noktasına) oldukça yakındır. Bu nedenle Mescid-i Haram'a bu kapıdan girilmesi önerilir.",
+          "Mahbes (Mahbas Al Jinn) bölgesindeki otellerde konaklanıyorsa Harem'e otobüsle ulaşılır. Otobüsler Gazze durağına gelmekte, yolcular Peygamber Efendimizin evinin yakınında inmektedir. Buradan yürünerek Selam Kapısı'ndan Mescid-i Haram'a girmek en yakın yoldur.",
+          "Harem'e yakın otellerde konaklanıyorsa Mescid-i Haram'a Kral Abdülaziz Kapısı'ndan girmek en rahat yoldur. Bu kapı, tavafın başlangıç noktası olan Hacerülesved hizasına (selamlama noktasına) da oldukça yakındır.",
           "Çıkışta Kral Abdülaziz Kapısı'nın yanındaki kapı veya 83, 84, 87 ve 93 numaraya kadar olan kapılar kullanıldığında Mekke Kulesi'ne (Saat Kulesi) yakın bir noktaya çıkılır.",
           "Cuma namazı için saat 09.00–09.30 arasında gelinip Kral Abdülaziz Kapısı'nın sağ tarafında yer bulunduğunda namaz gölgede kılınabilir (Kasım ayı tecrübesidir).",
         ],
@@ -119,6 +131,15 @@ const List<TripPhase> tripPhases = [
         items: [
           "Mescid-i Haram'da kadınlara ayrılan namaz ve oturma alanı Kral Fahd Kapısı'nın sol tarafında yer almaktadır.",
           'Kadınların namaz vaktinden 20–30 dakika önce kadınlar bölümüne gitmeleri önerilir. Çok erken gelindiğinde görevliler alanı boşaltabilmektedir; belirtilen zaman aralığında gelindiğinde ise içeride yer bulunabilmektedir.',
+        ],
+      ),
+      TripNoteSection(
+        title: 'Kadınlar İçin Namaz Vaktinde Tavaf',
+        icon: Icons.schedule,
+        numbered: true,
+        items: [
+          'Tavafın namaz vaktine kadar tamamlanabileceği düşünülüyorsa tavafın bitirilmesi önerilir. Namaz vakti yaklaştığında görevliler kadınları mataf alanının dışına çıkarmaktadır.',
+          'Tavafın namaz vaktine kadar tamamlanamayacağı düşünülüyorsa kadınlara ayrılan bir bölüme geçilerek namaz içeride kılınabilir ve namazdan sonra tavafa hemen devam edilebilir. Bunun nedeni, namaz vaktine çok yakın bir zamanda hâlâ mataf alanında bulunan kadınların görevlilerce dışarı çıkarılmasıdır. Bu durumda yeniden içeri girip tavafa devam etmek uzun zaman alabilmektedir.',
         ],
       ),
       TripNoteSection(
@@ -133,6 +154,19 @@ const List<TripPhase> tripPhases = [
           'Elaf Kinda',
           'ZamZam Pullman — Asansörlerde uzun bekleme süreleri yaşanmaktadır.',
         ],
+      ),
+      TripNoteSection(
+        title: 'Yemek',
+        icon: Icons.restaurant,
+        items: [
+          "Konaklanan otelde yemek hizmeti bulunmuyorsa ZamZam Alışveriş Merkezi'nin 3. katındaki restoranlar tercih edilebilir.",
+          'Bu katta bir Türk restoranı bulunmaktadır. Çorba 15 riyal, pide ve pizza ise 25 riyaldir.',
+          'Arap yemekleri sunan restoranlar da denenebilir. İki kişilik pilav ve tavuk yaklaşık 35 riyaldir.',
+          "Al Shufa Restoranı'nda açık büfe yemek 75 riyaldir.",
+          "Al Baik'te hamburger ve nugget tarzı yemekler denenebilir. Yemekler lezzetlidir ancak restoran çok kalabalık olmaktadır. Kişi başı 15–30 riyal arasında yemek yenebilmektedir.",
+          'Belirtilen fiyatlar tecrübeye dayanmaktadır ve zamanla değişebilir.',
+        ],
+        warning: 'Namazların hemen ardından alışveriş merkezi çok kalabalık olmaktadır. Bu nedenle yemek için namaz çıkışı saatleri tercih edilmemelidir.',
       ),
       TripNoteSection(
         title: 'Alışveriş ve Ulaşım',
@@ -192,7 +226,7 @@ const List<TripPhase> tripPhases = [
           'Hızlı trenin kullanımı oldukça kolaydır. İstasyona girildikten sonra üst kata çıkılır. Bu katta mescit bulunmakla birlikte ihram giyme alanı bulunmamaktadır.',
           'Trene yolcu kabulü kalkış saatinden yaklaşık 40 dakika önce başlar ve kalkışa 15 dakika kala sona erer.',
           'Bagajlar trene binilmeden önce güvenlik kontrolünden geçirilir.',
-          'En büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Yolcu başına 1 büyük valiz (en fazla 25 kg) ve 1 el çantası taşıma hakkı bulunmaktadır.',
+          'Büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Yolcu başına 1 orta boy valiz (en fazla 25 kg) ve 1 el çantası taşıma hakkı bulunmaktadır.',
         ],
         warning: 'Tren mikat sınırında durmamaktadır ve istasyonda ihram giyme alanı bulunmamaktadır. Bu nedenle ihram otelde giyilmeli, niyet edilip telbiye trene binilmeden önce getirilmelidir. Mikata gelmeden önce ihrama girmek caizdir.',
       ),

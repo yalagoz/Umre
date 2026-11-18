@@ -2,6 +2,18 @@
 
 Umre ibadeti için basit ve kullanışlı bir **Android ve iOS** uygulaması. Flutter ile tek kod tabanından geliştirilmiştir ve **internet bağlantısı olmadan** çalışır. Mekke ve Medine'de veri bağlantısı olmasa da tüm içerik telefonunuzda hazırdır.
 
+## Android'e kurulum
+
+<img src="docs/apk-karekod.png" width="200" alt="Umre Rehberi APK indirme karekodu">
+
+Telefonunuzun kamerasıyla karekodu okutun veya [bu bağlantıya](https://github.com/yalagoz/Umre/releases/latest/download/umre-rehberi.apk) dokunun. Karekod her zaman en son sürümün APK dosyasını indirir.
+
+1. İndirilen `umre-rehberi.apk` dosyasını açın.
+2. Android "bilinmeyen uygulamaları yükleme" izni isterse dosyayı açtığınız uygulamaya (Chrome veya Dosyalarım) bu izni verin.
+3. **Yükle** düğmesine dokunun.
+
+Sürüm 1.1.2 ve sonraki sürümler eski sürümün üzerine kurulur; notlarınız ve ayarlarınız korunur. Telefonunuzda 1.1.1 veya daha eski bir sürüm varsa önce onu kaldırmanız gerekir.
+
 ## Özellikler
 
 - **Adım adım umre rehberi**: Umrenin esaslarından ihrama, tavaftan sa'ye, tıraştan Medine ziyaretine kadar 15 bölüm. Kadınlara özel notlar ve sık yapılan hatalar da bu bölümler arasında.
@@ -11,7 +23,7 @@ Umre ibadeti için basit ve kullanışlı bir **Android ve iOS** uygulaması. Fl
   - Kaydırarak bir sonraki duaya geçiş
 - **Tavaf ve sa'y sayacı**: 7 şavtlık halka, titreşimli geri bildirim, geri alma. Sayaç her şavtta yapılacakları gösterir: remel, Safa → Merve yönü, hervele. Uygulama kapansa bile sayı korunur.
 - **Hazırlık listesi**: Evrak, ihram, sağlık, elektronik ve ibadet eşyaları için işaretlenebilir kontrol listesi.
-- **Umre notları**: Umre yapmış kişilerin tecrübeleri dört bölümde toplanır: Gitmeden Önce (pasaport, vize, yeşil pasaport, Nusuk, tren bileti), Mekke (kapılar, kadınlar için bilgiler, Harem'e yakın oteller), Medine (Bakî, yemek, hızlı tren) ve Dönüş (havalimanı, zemzem, Tax Free).
+- **Umre notları**: Umre yapmış kişilerin tecrübeleri dört bölümde toplanır: Gitmeden Önce (pasaport, vize, yeşil pasaport, Nusuk, tren bileti, para, elektrik prizleri), Mekke (Harem'e ulaşım ve kapılar, kadınlar için bilgiler, Harem'e yakın oteller, yemek), Medine (Bakî, yemek, hızlı tren) ve Dönüş (havalimanı, zemzem, Tax Free).
   - Her bölüme kendi notlarınızı ekleyip düzenleyebilir, tek tek paylaşabilirsiniz.
   - Her bölüm veya tüm notlar **PDF** olarak indirilebilir, paylaşılabilir ya da yazdırılabilir. PDF'e kişisel notlarınız da eklenir; "Gitmeden Önce" PDF'i hazırlık listesini de içerir.
 - **Ayarlar**: Yazı boyutu, açık/koyu tema, Arapça, okunuş ve anlam metinlerini ayrı ayrı gösterme veya gizleme.
@@ -54,7 +66,7 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-> Not: APK, Flutter'ın varsayılan hata ayıklama anahtarıyla imzalanır; kişisel kullanım ve test için uygundur. Google Play'e yüklemek için kendi imza anahtarınızı oluşturmanız gerekir.
+> Not: Sürüm APK'ları kalıcı bir imza anahtarıyla imzalanır; bu sayede yeni sürümler eski sürümün üzerine kurulabilir. Anahtar, depo ayarlarındaki `ANDROID_KEYSTORE_BASE64` ve `ANDROID_KEYSTORE_PASSWORD` gizli değişkenlerinden okunur. Bu değişkenler tanımlı değilse `main` derlemeleri geçici bir hata ayıklama anahtarıyla imzalanır, sürüm etiketi derlemeleri ise durdurulur.
 
 ## Geliştirme
 

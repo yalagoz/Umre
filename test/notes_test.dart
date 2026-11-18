@@ -116,7 +116,7 @@ void main() {
 
       await tester.tap(find.text('Mekke'));
       await tester.pumpAndSettle();
-      expect(find.text('Mescid-i Haram Kapıları'), findsOneWidget);
+      expect(find.text("Harem'e Ulaşım ve Kapılar"), findsOneWidget);
 
       await tester.tap(find.text('Not Ekle'));
       await tester.pumpAndSettle();
