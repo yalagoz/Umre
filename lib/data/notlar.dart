@@ -4,6 +4,8 @@
 // yeşil pasaport bilgisi Türkiye'nin Riyad Büyükelçiliği duyurusuna (AA,
 // 3 Kasım 2026), tren kuralları sar.hhr.sa sitesine göre yazılmıştır.
 // Ücretler ve kurallar değişebilir; yola çıkmadan önce kontrol edilmelidir.
+//
+// Metinler resmî bir dille ve devrik cümle kullanılmadan yazılmıştır.
 
 import 'package:flutter/material.dart';
 
@@ -38,9 +40,9 @@ const List<TripPhase> tripPhases = [
         title: 'Pasaport',
         icon: Icons.badge,
         items: [
-          "Pasaport, Suudi Arabistan'a giriş tarihinde en az 6 ay geçerli olmalıdır (resmi şart).",
-          'Sorun yaşamamak için en az 1 yıl geçerli bir pasaportla yola çıkmanız önerilir.',
-          'Ülkeye vize başvurusunda kullandığınız pasaportla giriş yapmalısınız.',
+          "Pasaportun, Suudi Arabistan'a giriş tarihi itibarıyla en az 6 ay geçerli olması gerekmektedir (resmî şart).",
+          'Herhangi bir sorunla karşılaşmamak için en az 1 yıl geçerliliği bulunan bir pasaportla seyahat edilmesi önerilir.',
+          'Ülkeye giriş, vize başvurusunda kullanılan pasaportla yapılmalıdır.',
         ],
       ),
       TripNoteSection(
@@ -49,29 +51,29 @@ const List<TripPhase> tripPhases = [
         numbered: true,
         links: [_visaLink],
         items: [
-          'visa.visitsaudi.com adresine girip "Apply Now" ile başvurun. Türkiye vatandaşları e-vize alabilir.',
-          'Pasaport bilgileri, beyaz fonlu dijital vesikalık fotoğraf, geçerli bir e-posta adresi ve ödeme için kredi kartı hazırlayın.',
-          'Ücreti kartla ödeyin. Kesin tutar (vize ücreti, sağlık sigortası ve KDV) ödeme adımında gösterilir. Farklı kaynaklarda toplam yaklaşık 100–145 USD olarak geçiyor.',
-          'Onaylanan vize e-posta ile gelir. Çıktısını ve telefonda bir kopyasını yanınızda bulundurun.',
+          'visa.visitsaudi.com adresine girilerek "Apply Now" seçeneğiyle başvuru yapılır. Türkiye Cumhuriyeti vatandaşları e-vize alabilmektedir.',
+          'Başvuru için pasaport bilgileri, beyaz fonlu dijital vesikalık fotoğraf, geçerli bir e-posta adresi ve ödeme için kredi kartı hazır bulundurulmalıdır.',
+          "Ödeme kredi kartıyla yapılır. Vize ücreti, sağlık sigortası ve KDV'den oluşan kesin tutar ödeme adımında gösterilmektedir. Farklı kaynaklara göre toplam tutar yaklaşık 100–145 USD'dir.",
+          'Onaylanan vize e-posta ile gönderilir. Vizenin basılı bir çıktısı ile telefonda kayıtlı bir kopyası seyahat süresince yanınızda bulunmalıdır.',
         ],
-        warning: 'Vize 1 yıl geçerli ve çok girişlidir; tek seferde en fazla 3 ay kalınır ve uzatılamaz. Başvuru ücreti hiçbir durumda iade edilmez. 18 yaşından küçükler için başvuruyu veli yapar. Turistik vize sahipleri hac döneminde Mekke\'ye giremez.',
+        warning: "Vize 1 yıl süreyle geçerlidir ve çok girişlidir. Her girişte en fazla 3 ay kalınabilir; bu süre uzatılamaz. Başvuru ücreti hiçbir durumda iade edilmez. 18 yaşından küçükler için başvuru veli tarafından yapılır. Turistik vize sahipleri hac döneminde Mekke'ye giremez.",
       ),
       TripNoteSection(
         title: 'Yeşil Pasaport',
         icon: Icons.book,
         items: [
-          '6 Kasım 2026\'dan itibaren diplomatik ve hususi (yeşil) pasaport sahipleri Suudi Arabistan\'a vizesiz girebilir (180 günde en fazla 90 gün).',
-          'Vizesiz girişte de pasaportun giriş tarihinde en az 6 ay geçerli olması gerekir.',
+          "6 Kasım 2026 tarihinden itibaren diplomatik ve hususi (yeşil) pasaport sahipleri Suudi Arabistan'a vizesiz giriş yapabilmektedir (180 gün içinde en fazla 90 gün).",
+          'Vizesiz girişlerde de pasaportun giriş tarihi itibarıyla en az 6 ay geçerli olması gerekmektedir.',
         ],
-        warning: 'Anlaşmanın 5. maddesine göre hac ve umre amaçlı seyahatler muafiyetin kapsamı dışındadır. Umre için yeşil pasaportla da vize alınması gerekir. Yola çıkmadan önce konsolosluk veya tur şirketinizle teyit edin.',
+        warning: 'Anlaşmanın 5. maddesi uyarınca hac ve umre amaçlı seyahatler muafiyet kapsamı dışındadır. Bu nedenle umre için yeşil pasaport sahiplerinin de vize alması gerekmektedir. Seyahatten önce bu bilginin konsolosluk veya tur şirketi aracılığıyla teyit edilmesi önerilir.',
       ),
       TripNoteSection(
         title: 'Nusuk ve Sağlık',
         icon: Icons.health_and_safety,
         links: [_nusukLink],
         items: [
-          'Umre izni ve Ravza ziyareti randevusu için Nusuk uygulamasını telefonunuza yükleyin.',
-          'Menenjit (ACWY) aşısını yolculuktan en az 10 gün önce yaptırın, aşı kartını yanınızda bulundurun.',
+          'Umre izni ve Ravza ziyareti randevusu için Nusuk uygulamasının telefona yüklenmesi gerekmektedir.',
+          'Menenjit (ACWY) aşısı yolculuktan en az 10 gün önce yaptırılmalı, aşı kartı seyahat süresince yanınızda bulundurulmalıdır.',
         ],
       ),
       TripNoteSection(
@@ -79,19 +81,19 @@ const List<TripPhase> tripPhases = [
         icon: Icons.train,
         links: [_trainTimetableLink, _trainBaggageLink],
         items: [
-          'Haremeyn Hızlı Treni biletleri sar.hhr.sa sitesinden veya Haramain (HHR) mobil uygulamasından alınır. Sefer saatleri sar.hhr.sa/timetable adresinde.',
-          'Medine–Mekke tek yön yaklaşık ücret: ekonomi 160–190 riyal, business 260 riyal ve üzeri. Fiyatlar tarihe ve KDV\'ye göre değişir.',
-          'Kişi başı 1 büyük valiz (en fazla 25 kg ve 65×55×35 cm) ile 1 el çantası alınabilir.',
-          'Kalkışa 20 dakikadan az kala bilet değiştirilemez; trene yetişemeyen yolcunun bileti yanar.',
+          'Haremeyn Hızlı Treni biletleri sar.hhr.sa internet sitesinden veya Haramain (HHR) mobil uygulamasından satın alınabilir. Sefer saatlerine sar.hhr.sa/timetable adresinden ulaşılabilir.',
+          'Medine–Mekke arası tek yön bilet ücreti ekonomi sınıfında yaklaşık 160–190 riyal, business sınıfında ise 260 riyal ve üzeridir. Fiyatlar tarihe ve KDV oranına göre değişiklik gösterebilir.',
+          'Yolcu başına 1 büyük valiz (en fazla 25 kg ve 65×55×35 cm) ile 1 el çantası taşıma hakkı bulunmaktadır.',
+          'Kalkışa 20 dakikadan az süre kala bilet değişikliği yapılamaz. Trene yetişemeyen yolcunun bileti geçersiz hâle gelir.',
         ],
       ),
       TripNoteSection(
         title: 'Para ve Ulaşım',
         icon: Icons.payments,
         items: [
-          'Kredi kartı hemen her yerde geçiyor ve kur farkı genellikle daha uygun oluyor.',
-          'Taksi için Uber uygulamasını önceden telefonunuza yükleyin.',
-          'Büyük valizle yola çıkmayın: hızlı trende en büyük boy valizler kabul edilmiyor veya ek ücret isteniyor.',
+          'Kredi kartı hemen her yerde kabul edilmektedir ve döviz kuru açısından genellikle daha avantajlıdır.',
+          'Taksi için Uber uygulamasının önceden telefona yüklenmesi önerilir.',
+          'Hızlı trende en büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Bu nedenle çok büyük valizle seyahat edilmemesi önerilir.',
         ],
       ),
     ],
@@ -106,38 +108,38 @@ const List<TripPhase> tripPhases = [
         title: 'Mescid-i Haram Kapıları',
         icon: Icons.door_front_door,
         items: [
-          'Kral Abdülaziz Kapısı\'ndan girince tavafa başlama (Hacerülesved\'i selamlama) noktasına çok yakın oluyorsunuz; buradan girmek uygundur.',
-          'Çıkarken yanındaki kapıyı ya da 83, 84, 87, hatta 93 numaraya kadar olan kapıları kullanırsanız Mekke Kulesi\'ne (Saat Kulesi) yakın bir noktaya çıkarsınız.',
-          'Cuma namazı için saat 09.00–09.30 arasında gidip Kral Abdülaziz Kapısı\'nın sağ tarafında yer bulursanız gölgede kalırsınız (Kasım ayı tecrübesi).',
+          "Kral Abdülaziz Kapısı, tavafın başlangıç noktası olan Hacerülesved hizasına (selamlama noktasına) oldukça yakındır. Bu nedenle Mescid-i Haram'a bu kapıdan girilmesi önerilir.",
+          "Çıkışta Kral Abdülaziz Kapısı'nın yanındaki kapı veya 83, 84, 87 ve 93 numaraya kadar olan kapılar kullanıldığında Mekke Kulesi'ne (Saat Kulesi) yakın bir noktaya çıkılır.",
+          "Cuma namazı için saat 09.00–09.30 arasında gelinip Kral Abdülaziz Kapısı'nın sağ tarafında yer bulunduğunda namaz gölgede kılınabilir (Kasım ayı tecrübesidir).",
         ],
       ),
       TripNoteSection(
         title: 'Kadınlar İçin',
         icon: Icons.woman,
         items: [
-          'Mescid-i Haram\'da kadınların namaz ve oturma alanı Kral Fahd Kapısı\'nın sol tarafındadır.',
-          'Kadınlar namaz vaktinden 20–30 dakika önce kadınlar bölümüne gitmelidir. Çok erken gidilirse görevliler dışarı çıkarabiliyor; bu aralıkta gidildiğinde içeride yer bulunabiliyor.',
+          "Mescid-i Haram'da kadınlara ayrılan namaz ve oturma alanı Kral Fahd Kapısı'nın sol tarafında yer almaktadır.",
+          'Kadınların namaz vaktinden 20–30 dakika önce kadınlar bölümüne gitmeleri önerilir. Çok erken gelindiğinde görevliler alanı boşaltabilmektedir; belirtilen zaman aralığında gelindiğinde ise içeride yer bulunabilmektedir.',
         ],
       ),
       TripNoteSection(
         title: "Harem'e Yakın Oteller",
         icon: Icons.hotel,
         items: [
-          'Hilton Suites Jabal Omar Makkah — Jabal Omar otellerinin Harem\'e en yakını; otelden çıkınca hemen Harem bölgesine giriyorsunuz.',
+          "Hilton Suites Jabal Omar Makkah — Jabal Omar otelleri arasında Harem'e en yakın olanıdır. Otelden çıkıldığında doğrudan Harem bölgesine girilmektedir.",
           'Jabal Omar Hyatt Regency Makkah',
-          'Al Safwah Hotel Tower — Kral Abdülaziz Kapısı\'ndan girip hemen sağındaki kapıdan çıkınca çok yakın. Altında misvakçılar, tesbihçiler ve seccadeciler var.',
-          'Makkah Hotel — biz burada kaldık, memnun kaldık.',
+          "Al Safwah Hotel Tower — Kral Abdülaziz Kapısı'ndan girildikten sonra hemen sağdaki kapıdan çıkıldığında otele kısa sürede ulaşılır. Otelin alt katında misvak, tesbih ve seccade satan dükkânlar bulunmaktadır.",
+          'Makkah Hotel — Bu otelde konaklanmış ve hizmetinden memnun kalınmıştır.',
           'Swissôtel Al Maqam Makkah',
           'Elaf Kinda',
-          'ZamZam Pullman — asansörler sıkıntılı, bekleme çok.',
+          'ZamZam Pullman — Asansörlerde uzun bekleme süreleri yaşanmaktadır.',
         ],
       ),
       TripNoteSection(
         title: 'Alışveriş ve Ulaşım',
         icon: Icons.storefront,
         items: [
-          'ZamZam girişinde uygun fiyatlı hurma ve maamul (hurmalı kurabiye) alınabilir.',
-          'Şehir içinde Uber kullanılabilir. Bazı otellerin arka tarafına (ör. Makkah Hotel) Uber çağrılamayabiliyor; bu durumda taksiye binebilirsiniz.',
+          'ZamZam girişinde uygun fiyatlı hurma ve maamul (hurmalı kurabiye) satın alınabilir.',
+          'Şehir içi ulaşımda Uber kullanılabilir. Bazı otellerin arka tarafına (ör. Makkah Hotel) Uber aracı çağırmak mümkün olmayabilir; bu durumda taksi tercih edilebilir.',
         ],
       ),
     ],
@@ -155,31 +157,31 @@ const List<TripPhase> tripPhases = [
         numbered: true,
         links: [_nusukLink],
         items: [
-          "Ravza'ya girmek için Nusuk uygulamasından randevu alınması gerekiyor. Tarih yaklaşınca randevu Türkiye'den de alınabiliyor.",
-          'Randevuyu namaz vaktinden yaklaşık 1 saat öncesine alın; böylece vakit namazını da orada kılmanız kolaylaşır.',
-          'Randevu saatinden 20 dakika önce giriş yapılabiliyor. Girişte telefondaki karekodu okutup içeri giriyorsunuz.',
-          "Önce içerideki bir bekleme alanında, yoğunluğa göre 10–20 dakika bekletiliyorsunuz; ardından asıl Ravza'ya geçiliyor.",
-          'Girişte görevliler sağa doğru yönlendiriyor. Fırsat bulup sol tarafa geçin ve en öne doğru ilerleyin; görevlilerle olabildiğince göz göze gelmemeye çalışın.',
-          'Asıl Ravza alanı en önde, sol tarafta iki sütun arasındadır.',
-          'Yer bulduğunuz anda hemen namaza durun; namaz kılan kişiye görevliler dokunmuyor.',
-          "Ezan vaktine 15 dakika kalaya kadar orada kalabilirseniz vakit namazını cemaatle Ravza'da kılabilirsiniz.",
-          'Peygamberimiz (s.a.s.) bu alan için "Evimle minberim arası cennet bahçelerinden bir bahçedir." buyurmuştur (Buhârî, 1196; Müslim, 1391). Bu yüzden ziyaretçiler burada iki rekât namaz kılmaya özen gösterir.',
+          "Ravza'ya girebilmek için Nusuk uygulaması üzerinden randevu alınması gerekmektedir. Ziyaret tarihi yaklaştığında randevu Türkiye'den de alınabilmektedir.",
+          "Randevunun namaz vaktinden yaklaşık 1 saat önceye alınması önerilir. Bu sayede vakit namazının da Ravza'da kılınması kolaylaşır.",
+          'Randevu saatinden 20 dakika önce girişe izin verilmektedir. Girişte telefondaki karekod okutulur.',
+          'Ziyaretçiler önce bir bekleme alanına alınır ve yoğunluğa bağlı olarak 10–20 dakika bekletilir. Ardından asıl Ravza alanına geçilir.',
+          'Girişte görevliler ziyaretçileri sağ tarafa yönlendirmektedir. Uygun bir fırsatta sol tarafa geçilerek öne doğru ilerlenmesi önerilir. Bu sırada görevlilerle göz teması kurmamaya özen gösterilmelidir.',
+          'Asıl Ravza alanı en önde, sol tarafta, iki sütun arasında yer almaktadır.',
+          'Yer bulunduğu anda hemen namaza durulmalıdır. Görevliler namaz kılan kişilere müdahale etmemektedir.',
+          "Ezan vaktine 15 dakika kalana kadar Ravza'da kalınabilirse vakit namazı burada cemaatle kılınabilir.",
+          'Peygamber Efendimiz (s.a.s.) bu alan hakkında "Evimle minberim arası cennet bahçelerinden bir bahçedir." buyurmuştur (Buhârî, 1196; Müslim, 1391). Bu nedenle ziyaretçiler burada iki rekât namaz kılmaya özen gösterir.',
         ],
-        warning: 'Ravza çok kalabalık olur. Öne geçmeye çalışırken kimseyi itip kakmadan, sakin ve edepli şekilde ilerleyin.',
+        warning: "Ravza'da yoğun bir kalabalık oluşmaktadır. Öne ilerlerken kimseyi itmeden, sakin ve edepli bir şekilde hareket edilmelidir.",
       ),
       TripNoteSection(
         title: 'Mescid-i Nebevî ve Bakî',
         icon: Icons.mosque,
         items: [
-          '365 numaralı kapının hemen yanında, ikindi namazından sonra Cennetü\'l-Bakî kapısı açılıyor; bu saatte ziyaret edilebilir.',
+          "Cennetü'l-Bakî Kapısı, 365 numaralı kapının hemen yanında yer almaktadır ve ikindi namazından sonra ziyarete açılmaktadır.",
         ],
       ),
       TripNoteSection(
         title: 'Yemek',
         icon: Icons.restaurant,
         items: [
-          '365 numaralı kapıdan çıkınca sol tarafta restoranlar var.',
-          '3. katta Türk restoranı da dahil olmak üzere yemek yerleri bulunuyor.',
+          '365 numaralı kapıdan çıkıldığında sol tarafta restoranlar bulunmaktadır.',
+          '3. katta bir Türk restoranı da dahil olmak üzere çeşitli restoranlar bulunmaktadır.',
         ],
       ),
       TripNoteSection(
@@ -187,12 +189,12 @@ const List<TripPhase> tripPhases = [
         icon: Icons.train,
         links: [_trainTimetableLink],
         items: [
-          'Hızlı tren kullanımı çok kolay. İstasyona girince üst kata çıkılıyor; burada mescit var ama ihram giyme alanı yok.',
-          'Tren, kalkış saatinden yaklaşık 40 dakika önce yolcu almaya başlıyor; kalkışa 15 dakika kala yolcu alımı kapanıyor.',
-          'Bagajlar trene binmeden önce güvenlik kontrolünden geçiyor.',
-          'En büyük boy valizler kabul edilmiyor veya ek ücret isteniyor; kişi başı 1 büyük valiz (en fazla 25 kg) ve 1 el çantası hakkı var.',
+          'Hızlı trenin kullanımı oldukça kolaydır. İstasyona girildikten sonra üst kata çıkılır. Bu katta mescit bulunmakla birlikte ihram giyme alanı bulunmamaktadır.',
+          'Trene yolcu kabulü kalkış saatinden yaklaşık 40 dakika önce başlar ve kalkışa 15 dakika kala sona erer.',
+          'Bagajlar trene binilmeden önce güvenlik kontrolünden geçirilir.',
+          'En büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Yolcu başına 1 büyük valiz (en fazla 25 kg) ve 1 el çantası taşıma hakkı bulunmaktadır.',
         ],
-        warning: 'Tren mikatta durmaz ve istasyonda ihram giyme alanı yoktur. İhramı otelde giyin; niyet edip telbiyeyi trene binmeden önce getirin. İhrama mikattan önce girmek caizdir.',
+        warning: 'Tren mikat sınırında durmamaktadır ve istasyonda ihram giyme alanı bulunmamaktadır. Bu nedenle ihram otelde giyilmeli, niyet edilip telbiye trene binilmeden önce getirilmelidir. Mikata gelmeden önce ihrama girmek caizdir.',
       ),
     ],
   ),
@@ -206,15 +208,15 @@ const List<TripPhase> tripPhases = [
         title: 'Cidde Havalimanına Ulaşım',
         icon: Icons.local_taxi,
         items: [
-          'Mekke\'den Cidde Havalimanı\'na araçla yaklaşık 1,5 saat sürüyor; trafik payı bırakarak erken yola çıkın.',
-          'Makkah Hotel\'in arkasına Uber çağrılamadığı için taksiye bindik; Cidde Havalimanı\'na 130 riyal ödedik.',
+          "Mekke'den Cidde Havalimanı'na karayoluyla ulaşım yaklaşık 1,5 saat sürmektedir. Trafik yoğunluğu göz önünde bulundurularak erken yola çıkılması önerilir.",
+          "Makkah Hotel'in arka tarafına Uber çağrılamadığından taksi kullanılmış ve Cidde Havalimanı'na kadar 130 riyal ödenmiştir.",
         ],
       ),
       TripNoteSection(
         title: 'Zemzem',
         icon: Icons.water_drop,
         items: [
-          'Cidde Havalimanı Terminal 1\'de C2 bölümünde zemzem alabilirsiniz; kişi başı 12,5 riyal.',
+          "Cidde Havalimanı Terminal 1'deki C2 bölümünden kişi başı 12,5 riyal karşılığında zemzem satın alınabilir.",
         ],
       ),
       TripNoteSection(
@@ -222,9 +224,9 @@ const List<TripPhase> tripPhases = [
         icon: Icons.receipt_long,
         numbered: true,
         items: [
-          'Tax Free uygulanan mağazalarda alışveriş yaparken vergi iadesi kaydı isteyin.',
-          'Cidde Havalimanı Terminal 1\'de havalimanının en sonundaki E2 kapısına gidin; Global Blue Tax Free noktası burada.',
-          'Buradaki cihazlara pasaportunuzu ve kredi kartınızı okutarak iade işlemini kendiniz yaparsınız.',
+          'Tax Free uygulaması bulunan mağazalarda alışveriş sırasında vergi iadesi kaydı talep edilmelidir.',
+          "Cidde Havalimanı Terminal 1'de, havalimanının en sonunda yer alan E2 kapısına gidilir. Global Blue Tax Free noktası bu bölümde bulunmaktadır.",
+          'Buradaki cihazlara pasaport ve kredi kartı okutularak iade işlemi yolcu tarafından yapılır.',
         ],
       ),
     ],
