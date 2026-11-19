@@ -19,6 +19,7 @@ const _slugs = {
   'mekke': 'mekke',
   'medine': 'medine',
   'donus': 'donus',
+  'ulasim': 'ulasim-ve-yemek',
 };
 
 String pdfFileName(List<TripPhase> phases) => phases.length == 1

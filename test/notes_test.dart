@@ -10,8 +10,14 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('not verileri', () {
-    test('dört aşama benzersiz ve dolu', () {
-      expect(tripPhases.map((p) => p.id), ['once', 'mekke', 'medine', 'donus']);
+    test('beş sekme benzersiz ve dolu', () {
+      expect(tripPhases.map((p) => p.id), [
+        'once',
+        'mekke',
+        'medine',
+        'donus',
+        'ulasim',
+      ]);
       for (final phase in tripPhases) {
         expect(phase.sections, isNotEmpty, reason: phase.id);
         for (final section in phase.sections) {
@@ -41,7 +47,22 @@ void main() {
         pdfFileName([tripPhaseById('once')]),
         'umre-notlari-gitmeden-once.pdf',
       );
+      expect(
+        pdfFileName([tripPhaseById('ulasim')]),
+        'umre-notlari-ulasim-ve-yemek.pdf',
+      );
       expect(pdfFileName(tripPhases), 'umre-notlari-tumu.pdf');
+    });
+
+    test('Ulaşım ve Yemek sekmesi tren ve yemek bilgilerini toplar', () {
+      final titles = tripPhaseById('ulasim').sections.map((s) => s.title);
+      expect(titles, contains('Mekke–Medine Arası Hızlı Tren'));
+      expect(titles, containsAll(["Mekke'de Yemek", "Medine'de Yemek"]));
+      final elsewhere = tripPhases
+          .where((p) => p.id != 'ulasim')
+          .expand((p) => p.sections)
+          .map((s) => s.title);
+      expect(elsewhere.where((t) => t.contains('Yemek')), isEmpty);
     });
   });
 
@@ -158,10 +179,15 @@ void main() {
       await tester.tap(find.byTooltip('PDF olarak indir'));
       await tester.pumpAndSettle();
 
+      // "Ulaşım ve Yemek" sekme adıyla da göründüğü için yalnızca listeye bakılır.
+      Finder inSheet(String text) => find.descendant(
+        of: find.byType(BottomSheet),
+        matching: find.text(text),
+      );
       for (final phase in tripPhases) {
-        expect(find.text(phase.title), findsOneWidget);
+        expect(inSheet(phase.title), findsOneWidget);
       }
-      expect(find.text('Tüm Notlar'), findsOneWidget);
+      expect(inSheet('Tüm Notlar'), findsOneWidget);
     });
   });
 }

@@ -23,7 +23,7 @@ Sürüm 1.1.2 ve sonraki sürümler eski sürümün üzerine kurulur; notların�
   - Kaydırarak bir sonraki duaya geçiş
 - **Tavaf ve sa'y sayacı**: 7 şavtlık halka, titreşimli geri bildirim, geri alma. Sayaç her şavtta yapılacakları gösterir: remel, Safa → Merve yönü, hervele. Uygulama kapansa bile sayı korunur.
 - **Hazırlık listesi**: Evrak, ihram, sağlık, elektronik ve ibadet eşyaları için işaretlenebilir kontrol listesi.
-- **Umre notları**: Umre yapmış kişilerin tecrübeleri dört bölümde toplanır: Gitmeden Önce (pasaport, vize, yeşil pasaport, Nusuk, tren bileti, para, elektrik prizleri), Mekke (Harem'e ulaşım ve kapılar, kadınlar için bilgiler, Harem'e yakın oteller, yemek), Medine (Bakî, yemek, hızlı tren) ve Dönüş (havalimanı, zemzem, Tax Free).
+- **Umre notları**: Umre yapmış kişilerin tecrübeleri beş bölümde toplanır: Gitmeden Önce (pasaport, vize, yeşil pasaport, Nusuk, para, elektrik prizleri), Mekke (Harem'e ulaşım ve kapılar, kadınlar için bilgiler, Harem'e yakın oteller), Medine (Ravza, Bakî, hızlı trenle Mekke'ye geçiş), Dönüş (zemzem, Tax Free) ve Ulaşım ve Yemek (Uber ve Careem, havalimanı otobüsleri, hızlı tren ve minibüs, Mekke ve Medine'de yemek).
   - Her bölüme kendi notlarınızı ekleyip düzenleyebilir, tek tek paylaşabilirsiniz.
   - Her bölüm veya tüm notlar **PDF** olarak indirilebilir, paylaşılabilir ya da yazdırılabilir. PDF'e kişisel notlarınız da eklenir; "Gitmeden Önce" PDF'i hazırlık listesini de içerir.
 - **Ayarlar**: Yazı boyutu, açık/koyu tema, Arapça, okunuş ve anlam metinlerini ayrı ayrı gösterme veya gizleme.
@@ -36,7 +36,7 @@ Sürüm 1.1.2 ve sonraki sürümler eski sürümün üzerine kurulur; notların�
 | Dualar | Kategorilere ayrılmış dualar, arama ve favoriler |
 | Sayaç | Tavaf ve sa'y şavt sayacı |
 | Hazırlık | Yolculuk kontrol listesi |
-| Notlar | Gitmeden Önce, Mekke, Medine ve Dönüş notları; kişisel notlar ve PDF |
+| Notlar | Gitmeden Önce, Mekke, Medine, Dönüş ve Ulaşım ve Yemek notları; kişisel notlar ve PDF |
 
 ## İçerik ve Kaynaklar
 
@@ -89,7 +89,7 @@ lib/
 ├── data/
 │   ├── dualar.dart           Dua metinleri ve kategoriler
 │   ├── rehber.dart           Adım adım umre rehberi
-│   ├── notlar.dart           Gitmeden Önce / Mekke / Medine / Dönüş notları
+│   ├── notlar.dart           Gitmeden Önce / Mekke / Medine / Dönüş / Ulaşım ve Yemek notları
 │   └── hazirlik.dart         Hazırlık listesi
 ├── services/pdf_export.dart  Notları PDF'e dönüştürme
 ├── state/app_state.dart      Ayarlar, favoriler, sayaç, kişisel notlar (cihazda saklanır)

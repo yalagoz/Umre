@@ -78,23 +78,11 @@ const List<TripPhase> tripPhases = [
         ],
       ),
       TripNoteSection(
-        title: 'Hızlı Tren Bileti',
-        icon: Icons.train,
-        links: [_trainTimetableLink, _trainBaggageLink],
-        items: [
-          'Haremeyn Hızlı Treni biletleri sar.hhr.sa internet sitesinden veya Haramain (HHR) mobil uygulamasından satın alınabilir. Sefer saatlerine sar.hhr.sa/timetable adresinden ulaşılabilir.',
-          'Medine–Mekke arası tek yön bilet ücreti ekonomi sınıfında yaklaşık 160–190 riyal, business sınıfında ise 260 riyal ve üzeridir. Fiyatlar tarihe ve KDV oranına göre değişiklik gösterebilir.',
-          'Yolcu başına 1 orta boy valiz (en fazla 25 kg ve 65×55×35 cm) ile 1 el çantası taşıma hakkı bulunmaktadır. Büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır.',
-          'Kalkışa 20 dakikadan az süre kala bilet değişikliği yapılamaz. Trene yetişemeyen yolcunun bileti geçersiz hâle gelir.',
-        ],
-      ),
-      TripNoteSection(
-        title: 'Para ve Ulaşım',
+        title: 'Para ve Bagaj',
         icon: Icons.payments,
         items: [
           'Kredi kartı hemen her yerde kabul edilmektedir.',
           'Kuveyt Türk kredi kartları, yurt dışı harcamalarını kur farkı eklemeden alış ve satış kurunun ortalaması üzerinden ekstreye yansıtmaktadır. Örneğin alış kuru 13,00 TL ve satış kuru 13,50 TL olduğunda harcama 13,25 TL üzerinden hesaplanmaktadır. Bu nedenle Kuveyt Türk kartları bu konuda avantajlıdır; diğer bankaların uygulamaları ayrıca araştırılabilir.',
-          'Taksi için Uber uygulamasının önceden telefona yüklenmesi önerilir.',
           'Hızlı trende büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Bu nedenle orta boy valizle seyahat edilmesi önerilir.',
         ],
       ),
@@ -156,24 +144,10 @@ const List<TripPhase> tripPhases = [
         ],
       ),
       TripNoteSection(
-        title: 'Yemek',
-        icon: Icons.restaurant,
-        items: [
-          "Konaklanan otelde yemek hizmeti bulunmuyorsa ZamZam Alışveriş Merkezi'nin 3. katındaki restoranlar tercih edilebilir.",
-          'Bu katta bir Türk restoranı bulunmaktadır. Çorba 15 riyal, pide ve pizza ise 25 riyaldir.',
-          'Arap yemekleri sunan restoranlar da denenebilir. İki kişilik pilav ve tavuk yaklaşık 35 riyaldir.',
-          "Al Shufa Restoranı'nda açık büfe yemek 75 riyaldir.",
-          "Al Baik'te hamburger ve nugget tarzı yemekler denenebilir. Yemekler lezzetlidir ancak restoran çok kalabalık olmaktadır. Kişi başı 15–30 riyal arasında yemek yenebilmektedir.",
-          'Belirtilen fiyatlar tecrübeye dayanmaktadır ve zamanla değişebilir.',
-        ],
-        warning: 'Namazların hemen ardından alışveriş merkezi çok kalabalık olmaktadır. Bu nedenle yemek için namaz çıkışı saatleri tercih edilmemelidir.',
-      ),
-      TripNoteSection(
-        title: 'Alışveriş ve Ulaşım',
+        title: 'Alışveriş',
         icon: Icons.storefront,
         items: [
           'ZamZam girişinde uygun fiyatlı hurma ve maamul (hurmalı kurabiye) satın alınabilir.',
-          'Şehir içi ulaşımda Uber kullanılabilir. Bazı otellerin arka tarafına (ör. Makkah Hotel) Uber aracı çağırmak mümkün olmayabilir; bu durumda taksi tercih edilebilir.',
         ],
       ),
     ],
@@ -211,22 +185,13 @@ const List<TripPhase> tripPhases = [
         ],
       ),
       TripNoteSection(
-        title: 'Yemek',
-        icon: Icons.restaurant,
-        items: [
-          '365 numaralı kapıdan çıkıldığında sol tarafta restoranlar bulunmaktadır.',
-          '3. katta bir Türk restoranı da dahil olmak üzere çeşitli restoranlar bulunmaktadır.',
-        ],
-      ),
-      TripNoteSection(
         title: "Hızlı Trenle Mekke'ye Geçiş",
         icon: Icons.train,
         links: [_trainTimetableLink],
         items: [
           'Hızlı trenin kullanımı oldukça kolaydır. İstasyona girildikten sonra üst kata çıkılır. Bu katta mescit bulunmakla birlikte ihram giyme alanı bulunmamaktadır.',
           'Trene yolcu kabulü kalkış saatinden yaklaşık 40 dakika önce başlar ve kalkışa 15 dakika kala sona erer.',
-          'Bagajlar trene binilmeden önce güvenlik kontrolünden geçirilir.',
-          'Büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır. Yolcu başına 1 orta boy valiz (en fazla 25 kg) ve 1 el çantası taşıma hakkı bulunmaktadır.',
+          'Bagajlar trene binilmeden önce güvenlik kontrolünden geçirilir. Bilet ve bagaj kuralları "Ulaşım ve Yemek" bölümünde yer almaktadır.',
         ],
         warning: 'Tren mikat sınırında durmamaktadır ve istasyonda ihram giyme alanı bulunmamaktadır. Bu nedenle ihram otelde giyilmeli, niyet edilip telbiye trene binilmeden önce getirilmelidir. Mikata gelmeden önce ihrama girmek caizdir.',
       ),
@@ -238,14 +203,6 @@ const List<TripPhase> tripPhases = [
     tabLabel: 'Dönüş',
     icon: Icons.flight_land,
     sections: [
-      TripNoteSection(
-        title: 'Cidde Havalimanına Ulaşım',
-        icon: Icons.local_taxi,
-        items: [
-          "Mekke'den Cidde Havalimanı'na karayoluyla ulaşım yaklaşık 1,5 saat sürmektedir. Trafik yoğunluğu göz önünde bulundurularak erken yola çıkılması önerilir.",
-          "Makkah Hotel'in arka tarafına Uber çağrılamadığından taksi kullanılmış ve Cidde Havalimanı'na kadar 130 riyal ödenmiştir.",
-        ],
-      ),
       TripNoteSection(
         title: 'Zemzem',
         icon: Icons.water_drop,
@@ -261,6 +218,81 @@ const List<TripPhase> tripPhases = [
           'Tax Free uygulaması bulunan mağazalarda alışveriş sırasında vergi iadesi kaydı talep edilmelidir.',
           "Cidde Havalimanı Terminal 1'de, havalimanının en sonunda yer alan E2 kapısına gidilir. Global Blue Tax Free noktası bu bölümde bulunmaktadır.",
           'Buradaki cihazlara pasaport ve kredi kartı okutularak iade işlemi yolcu tarafından yapılır.',
+        ],
+      ),
+    ],
+  ),
+  TripPhase(
+    id: 'ulasim',
+    title: 'Ulaşım ve Yemek',
+    tabLabel: 'Ulaşım ve Yemek',
+    icon: Icons.directions_bus,
+    sections: [
+      TripNoteSection(
+        title: 'Taksi: Uber ve Careem',
+        icon: Icons.local_taxi,
+        items: [
+          'Şehir içi ulaşımda Uber veya Careem uygulaması kullanılabilir. Bu uygulamalarla yapılan yolculuklar, normal taksi ücretlerinin yaklaşık yarısına mal olmaktadır.',
+          'Uygulamaların yola çıkmadan önce telefona yüklenmesi önerilir.',
+          'Bazı otellerin arka tarafına (ör. Makkah Hotel) Uber aracı çağırmak mümkün olmayabilir; bu durumda taksi tercih edilebilir.',
+        ],
+      ),
+      TripNoteSection(
+        title: "Medine Havalimanı'ndan Mescid-i Nebevî'ye",
+        icon: Icons.directions_bus,
+        items: [
+          "Medine Havalimanı'nda 5 numaralı kapıdan çıkıldığında 400 numaralı otobüslerle Mescid-i Nebevî'ye gidilebilir.",
+          'Ücret kişi başı 11,5 riyaldir ve kredi kartıyla ödenebilir.',
+        ],
+      ),
+      TripNoteSection(
+        title: 'Mekke–Medine Arası Hızlı Tren',
+        icon: Icons.train,
+        links: [_trainTimetableLink, _trainBaggageLink],
+        items: [
+          "Mekke ile Medine arasındaki en konforlu ulaşım yolu Haremeyn Hızlı Treni'dir.",
+          'Biletler sar.hhr.sa internet sitesinden veya Haramain (HHR) mobil uygulamasından satın alınabilir. Sefer saatlerine sar.hhr.sa/timetable adresinden ulaşılabilir.',
+          'Medine–Mekke arası tek yön bilet ücreti ekonomi sınıfında yaklaşık 160–190 riyal, business sınıfında ise 260 riyal ve üzeridir. Fiyatlar tarihe ve KDV oranına göre değişiklik gösterebilir.',
+          'Yolcu başına 1 orta boy valiz (en fazla 25 kg ve 65×55×35 cm) ile 1 el çantası taşıma hakkı bulunmaktadır. Büyük boy valizler kabul edilmemekte veya ek ücrete tabi tutulmaktadır.',
+          'Kalkışa 20 dakikadan az süre kala bilet değişikliği yapılamaz. Trene yetişemeyen yolcunun bileti geçersiz hâle gelir.',
+        ],
+      ),
+      TripNoteSection(
+        title: 'Mekke–Medine Arası Minibüs',
+        icon: Icons.airport_shuttle,
+        items: [
+          "Mekke'den Medine'ye minibüsle gidilmek istenirse Anjum Oteli'nin önünden kalkan minibüsler kullanılabilir. Ücret kişi başı 50–60 riyal arasındadır.",
+        ],
+      ),
+      TripNoteSection(
+        title: "Mekke'den Cidde Havalimanı'na",
+        icon: Icons.flight_takeoff,
+        items: [
+          "Mekke'den Cidde Havalimanı'na karayoluyla ulaşım yaklaşık 1,5 saat sürmektedir. Trafik yoğunluğu göz önünde bulundurularak erken yola çıkılması önerilir.",
+          "Otobüsle gidilmek istenirse Mekke'deki Jarwal Otobüs Terminali'nden kalkan otobüsler kullanılabilir. Yolculuk yaklaşık 1 saat 25 dakika sürmekte, ücret ise 40–60 riyal arasında değişmektedir.",
+          "Makkah Hotel'in arka tarafına Uber çağrılamadığından taksi kullanılmış ve Cidde Havalimanı'na kadar 130 riyal ödenmiştir.",
+        ],
+      ),
+      TripNoteSection(
+        title: "Mekke'de Yemek",
+        icon: Icons.restaurant,
+        items: [
+          "Konaklanan otelde yemek hizmeti bulunmuyorsa ZamZam Alışveriş Merkezi'nin 3. katındaki restoranlar tercih edilebilir.",
+          'Bu katta bir Türk restoranı bulunmaktadır. Çorba 15 riyal, pide ve pizza ise 25 riyaldir.',
+          'Arap yemekleri sunan restoranlar da denenebilir. İki kişilik pilav ve tavuk yaklaşık 35 riyaldir.',
+          "Al Shufa Restoranı'nda açık büfe yemek 75 riyaldir.",
+          "Al Baik'te hamburger ve nugget tarzı yemekler denenebilir. Yemekler lezzetlidir ancak restoran çok kalabalık olmaktadır. Kişi başı 15–30 riyal arasında yemek yenebilmektedir.",
+          'Belirtilen fiyatlar tecrübeye dayanmaktadır ve zamanla değişebilir.',
+        ],
+        warning: 'Namazların hemen ardından alışveriş merkezi çok kalabalık olmaktadır. Bu nedenle yemek için namaz çıkışı saatleri tercih edilmemelidir.',
+      ),
+      TripNoteSection(
+        title: "Medine'de Yemek",
+        icon: Icons.restaurant,
+        items: [
+          "Mescid-i Nebevî'de akşam namazı vaktinde mescidin içinde yoğurt, ekmek, su, hurma ve kurabiyeden oluşan bir ikram yapılmaktadır.",
+          '365 numaralı kapıdan çıkıldığında sol tarafta restoranlar bulunmaktadır.',
+          '3. katta bir Türk restoranı da dahil olmak üzere çeşitli restoranlar bulunmaktadır.',
         ],
       ),
     ],
